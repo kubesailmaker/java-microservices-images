@@ -10,6 +10,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 EXPOSE 8080
 
 RUN mkdir -p /opt/app && ln -s /opt/app /lib && mkdir /opt/db-migrations && ln -s /opt/db-migrations /flyway && for module in $(rpm -qa|grep python); do rpm -e --nodeps $module; done;
+RUN for python_dir in $(find . -name python  2>/dev/null); do rm -rf $python_dir; done
 
 
 WORKDIR /opt/app
