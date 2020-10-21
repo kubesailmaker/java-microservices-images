@@ -16,3 +16,4 @@ RUN addgroup -g 1000 -S app && adduser -u 1000 -G app -S app \
 && chown -R app:app /opt/db-migrations
 
 USER app
+
