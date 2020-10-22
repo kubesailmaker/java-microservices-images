@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 EXPOSE 8080
 
-RUN mkdir -p /opt/app && ln -s /opt/app /lib && mkdir -p /opt/db-migrations && ln -s /opt/db-migrations /flyway
+RUN mkdir -p /opt/app && ln -s /opt/app /libs && mkdir -p /opt/db-migrations && ln -s /opt/db-migrations /flyway
 
 WORKDIR /opt/app
 
