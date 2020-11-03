@@ -12,8 +12,7 @@ RUN mkdir -p /opt/app && ln -s /opt/app /libs && mkdir -p /opt/db-migrations && 
 WORKDIR /opt/app
 
 RUN addgroup -g 1000 -S app && adduser -u 1000 -G app -S app \
-&& chown -R app:app /opt/app \
-&& chown -R app:app /opt/db-migrations
+&& chown -R app:app /opt/app /libs /opt/db-migrations /flyway 
 
 USER app
 
